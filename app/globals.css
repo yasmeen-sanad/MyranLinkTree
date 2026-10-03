@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;0,6..96,800;1,6..96,500&family=Figtree:wght@400;600&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+:root {
+  color-scheme: light;
+  --name: #ffc7e1;       /* لون اسم ميرنا (ما تغيّر) */
+  --pink: #ecccdc;       /* وردي البوستر في الصورة */
+  --mauve: #f5ddeb;      /* خلفية الصفحة (موف رمادي) */
+  --burgundy: #8a1a3a;   /* لون النصوص (واين) */
+  --deep: #5a0f2b;       /* واين غامق للظل */
+  --charcoal: #5a0f2b;   /* الفحمي الغامق */
+  --cream: #efe6d8;      /* الكريمي البيج */
+  --paper: #f7f1e8;      /* كريمي فاتح */
+  --rose: #a3203f;
+  --display: 'Bodoni Moda', Georgia, serif;
+  --body: 'Figtree', Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; }
+
+/* ---------- Desk + poster sheet ---------- */
+.poster-page { min-height: 100vh; display: flex; justify-content: center; align-items: flex-start; padding: 28px 16px 40px; background: var(--mauve); font-family: var(--body); color: var(--burgundy); }
+.poster { width: min(100%, 480px); padding: 12px; background: var(--paper); border: 2px solid var(--burgundy); box-shadow: 10px 10px 0 var(--pink); }
+.poster-inner { position: relative; overflow: hidden; padding: 18px 20px 26px; border: 1px solid var(--burgundy); background: var(--cream); }
+
+.masthead { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--burgundy); font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--burgundy); }
+
+/* ---------- Hero ---------- */
+.hero { margin-top: 24px; text-align: center; }
+.arch-wrap { position: relative; width: 65%; margin: 0 auto; }
+.arch { aspect-ratio: 4 / 5; overflow: hidden; border: 3px solid var(--burgundy); border-radius: 999px 999px 0 0; background: var(--pink); box-shadow: 0 0 0 6px var(--pink), 0 0 0 8px var(--burgundy); animation: rise .9s cubic-bezier(.2, .9, .3, 1) both; }
+.arch img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.bow-sticker { position: absolute; top: -35px; left: 50%; transform: translateX(-50%); width: 150px; z-index: 10; }
+@keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+.sash { position: absolute; z-index: 3; top: 26%; right: -17%; width: 138px; margin: 0; padding: 8px 12px; background: var(--pink); border: 2px solid var(--burgundy); color: var(--burgundy); font-family: var(--display); font-style: italic; font-size: 15px; line-height: 1.2; transform: rotate(8deg); box-shadow: 3px 3px 0 var(--burgundy); }
+
+/* اسم ميرنا: نفس اللون والظل، ما تغيّر */
+h1 { position: relative; z-index: 2; margin: -.4em 0 0; font-family: var(--display); font-size: clamp(56px, 23vw, 100px); font-weight: 800; line-height: .85; letter-spacing: -.04em; color: var(--name); text-shadow: 4px 4px 0 var(--deep); }
+.h1-heart { display: inline-block; width: .3em; height: .3em; margin-left: .06em; vertical-align: top; fill: var(--rose); stroke: var(--name); stroke-width: 1.6; text-shadow: none; }
+
+.tagline { max-width: 30ch; margin: -40px auto 0; font-family: var(--display); font-style: italic; font-size: 18px; line-height: 1; color: var(--burgundy); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.tagline-large { font-size: 19px; font-weight: 600; }
+.tagline-small { font-size: 19px; }
+
+/* ---------- Story block (فحمي زي سلايد My Creative Journey) ---------- */
+.story { display: flex; align-items: center; gap: 16px; margin-top: 26px; padding: 18px 20px; background: var(--charcoal); color: var(--cream); }
+.story-star { display: grid; flex: 0 0 auto; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--pink); color: var(--charcoal); }
+.story-star svg { width: 20px; height: 20px; fill: var(--charcoal); }
+.story h2 { margin: 0; font-family: var(--display); font-style: italic; font-weight: 500; font-size: 26px; color: var(--pink); }
+.story p { margin: 4px 0 0; font-size: 14px; line-height: 1.45; color: var(--cream); }
+
+/* ---------- Links: ticket stubs ---------- */
+.lineup { margin-top: 28px; }
+.lineup h2 { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 16px; font-family: var(--display); font-style: italic; font-weight: 500; font-size: 32px; color: var(--burgundy); }
+.lineup h2 svg { width: 16px; height: 16px; fill: var(--rose); stroke: var(--burgundy); }
+.ticket-list { display: flex; flex-direction: column; gap: 12px; }
+.ticket { display: flex; align-items: center; gap: 14px; padding: 14px 0 14px 16px; border: 2px solid var(--charcoal); background: #fff; color: var(--burgundy); text-decoration: none; transition: background .2s ease, color .2s ease; }
+.ticket.featured { background: var(--pink); }
+.ticket:hover { background: var(--charcoal); color: var(--cream); }
+.ticket:focus-visible { outline: 3px solid var(--burgundy); outline-offset: 3px; }
+.ticket-icon { flex: 0 0 auto; width: 24px; height: 24px; }
+.ticket-text { display: flex; flex: 1; flex-direction: column; gap: 2px; }
+.ticket-text strong { font-family: var(--display); font-weight: 800; font-size: 19px; line-height: 1.15; }
+.ticket-text small { font-size: 12px; opacity: .8; }
+.stub { display: grid; place-items: center; align-self: stretch; padding: 0 16px; border-left: 2px dashed currentColor; }
+.stub svg { width: 20px; height: 20px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
