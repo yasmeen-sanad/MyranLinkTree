@@ -3,25 +3,24 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'The Princess Cider Club',
-  description: 'Dress like your fairytale with The Princess Cider Club.',
+  title: 'myrna link tree',
   generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/image1.jpeg',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/image1.jpeg',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/image1.jpeg',
+        type: 'image/jpeg',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/image1.jpeg',
   },
 }
 
