@@ -1,13 +1,9 @@
 import { ArrowUpRight, Camera, Crown, Heart, ShoppingBag, Sparkles, Star } from 'lucide-react'
 
 const links = [
-  {
-    label: 'Cider',
-    detail: 'Your next favorite outfit is waiting',
-    href: 'https://ciderhere.com/MyrnaCiderPicks',
-    icon: ShoppingBag,
-    featured: true,
-  },
+ 
+  
+  
   {
     label: 'Instagram',
     detail: '@myrna.7',
@@ -20,6 +16,12 @@ const links = [
     href: 'https://www.tiktok.com/@myrnaiana?_r=1&_t=ZS-9AA0HWWk9H3',
     icon: Sparkles,
   },
+  
+  {   label: 'Cider',
+    detail: 'Your next favorite outfit is waiting',
+    href: 'https://ciderhere.com/MyrnaCiderPicks',
+    icon: ShoppingBag,
+    featured: true,},
 ]
 
 export default function Page() {
@@ -30,7 +32,7 @@ export default function Page() {
           <header className="hero">
             <div className="arch-wrap">
               <div className="arch">
-                <img src="/image1.jpeg" alt="Myrna" />
+                <img src="/image3.jpeg" alt="Myrna" />
               </div>
               <img src="/stickers/sticker-bow.png" alt="" className="bow-sticker" aria-hidden="true" />
             </div>
