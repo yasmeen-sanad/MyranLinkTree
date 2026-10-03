@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/image1.jpeg',
+        url: '/image3.jpeg',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/image1.jpeg',
+        url: '/image3.jpeg',
         media: '(prefers-color-scheme: dark)',
       },
       {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         type: 'image/jpeg',
       },
     ],
-    apple: '/image1.jpeg',
+    apple: '/image3.jpeg',
   },
 }
 
